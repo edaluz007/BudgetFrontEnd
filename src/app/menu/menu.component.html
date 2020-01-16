@@ -1,0 +1,42 @@
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="header">
+    <span class="nav-tool-items">
+        <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+    </span>
+    <div>budget Control</div>
+    <div class="perfil">
+        <mat-icon>account_circle</mat-icon>
+    </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <!-- Sidenav -->
+    <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+        [fixedTopGap]>
+        <mat-nav-list>
+            <a mat-list-item>
+                <mat-icon>folder</mat-icon> budget
+            </a>
+            <a mat-list-item>
+                <mat-icon>person</mat-icon> User Profile
+            </a>
+            <a mat-list-item>
+                <mat-icon>content_paste</mat-icon> Table List
+            </a>
+            <a mat-list-item>
+                <mat-icon>library_books</mat-icon> Typography
+            </a>
+            <a mat-list-item>
+                <mat-icon>location_on</mat-icon> Maps
+            </a>
+            <a mat-list-item>
+                <mat-icon>calendar_today</mat-icon> Calendar
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Main content -->
+    <mat-sidenav-content>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
